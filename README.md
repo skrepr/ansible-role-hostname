@@ -1,49 +1,41 @@
-Deploy
-=========
+<a href="https://skrepr.com/">
+  <p align="center">
+    <img width="200" height="100" src="https://skrepr.com/theme/skrepr/img/skrepr.svg?a3d5f79941" alt="skrepr" />
+  </p>
+</a>
+<h1 align="center">Ansible Role Hostname</h1>
+<div align="center">
+  <a href="https://github.com/skrepr/ansible-role-hostname/releases"><img src="https://img.shields.io/github/release/skrepr/ansible-role-hostname.svg" alt="Releases"/></a><a> </a>
+  <a href="https://github.com/skrepr/ansible-role-hostname/blob/main/LICENSE"><img src="https://img.shields.io/github/license/skrepr/ansible-role-hostname" alt="LICENSE"/></a><a> </a>
+  <a href="https://github.com/skrepr/ansible-role-hostname/actions/workflows/ci.yml"><img src="https://github.com/skrepr/ansible-role-hostname/actions/workflows/ci.yml/badge.svg" alt="CI"/></a><a> </a>
+  <a href="https://github.com/skrepr/ansible-role-hostname/issues"><img src="https://img.shields.io/github/issues/skrepr/ansible-role-hostname.svg" alt="Issues"/></a><a> </a>
+  <a href="https://github.com/skrepr/ansible-role-hostname/pulls"><img src="https://img.shields.io/github/issues-pr/skrepr/ansible-role-hostname.svg" alt="PR"/></a><a> </a>
+  <a href="https://github.com/skrepr/ansible-role-hostname/commits"><img src="https://img.shields.io/github/commit-activity/m/skrepr/ansible-role-hostname" alt="Commits"/></a><a> </a>
+  <a href="https://github.com/skrepr/ansible-role-hostname/stars"><img src="https://img.shields.io/github/stars/skrepr/ansible-role-hostname.svg" alt="Stars"/></a><a> </a>
+  <a href="https://github.com/skrepr/ansible-role-hostname/releases"><img src="https://img.shields.io/github/forks/skrepr/ansible-role-hostname.svg" alt="Forks"/></a><a> </a>
+</div>
 
-This Ansible role is used for deploying your Docker application on a Debian server
+# About
 
-Requirements
-------------
+This Ansible role is used for changing the hostname on your server. It works by taking your `{{ inventory_hostname }}'` and using it for changing the hostname.
+
+[![Ansible Role](https://img.shields.io/ansible/role/56377)](https://galaxy.ansible.com/skrepr/hostname)
+[![Ansible Role](https://img.shields.io/ansible/role/d/56377)](https://galaxy.ansible.com/skrepr/hostname)
+[![Ansible Quality Score](https://img.shields.io/ansible/quality/56377)](https://galaxy.ansible.com/skrepr/hostname)
+
+## Requirements
 
 - SSH access to the server
-- Git repository with project
-- Docker Compose file
 
-Role Variables
---------------
-
-If you want to use a differently named docker-compose file, you can change that. The default is docker-compose.yml
-
-```yaml
-docker-compose_name: docker-compose.yml
-```
-
-Give the url of the git repo from which needs to be pulled.
-
-```yaml
-repository_url: git@github.com:skrepr/ansible-role-deploy.git
-```
-
-Give the directory where the application needs te be installed on the server. The default is /home/deploy/project
-
-```yaml
-project_directory: /home/deploy/project
-```
-
- Choose the branch you want to use for pulling
-
-```yaml
-git_branch: main
-```
-
-Dependencies
-------------
+## Role Variables
 
 None.
 
-Example Playbook
-----------------
+## Dependencies
+
+None.
+
+## Example Playbook
 
 ```yaml
 #!/usr/bin/env ansible-playbook
@@ -51,22 +43,15 @@ Example Playbook
 
 - hosts: production
   become: true
-  become_flags: "--preserve-env=SSH_AUTH_SOCK"
 
   roles:
-   - geerlingguy.git
-   - geerlingguy.pip
-   - geerlingguy.docker
-   - geerlingguy.nginx
-   - skrepr.deploy
+   - skrepr.hostname
 ```
 
-License
--------
+## License
 
 MIT / BSD
 
-Author Information
-------------------
+## Author Information
 
-This role was created in 2021 by [Jeroen van der Meulen](https://github.com/jeroenvandermeulen), commisioned by [Skrepr](https://skrepr.com)
+This role was created in 2021 by [Jeroen van der Meulen](https://github/jeroenvandermeulen), commisioned by [Skrepr](https://skrepr.com)
