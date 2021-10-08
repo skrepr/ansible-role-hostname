@@ -17,11 +17,13 @@
 
 # About
 
-This Ansible role is used for changing the hostname on your server. It works by taking your `{{ inventory_hostname }}'` and using it for changing the hostname.
+This Ansible role is used for changing the hostname on your server. 
 
-[![Ansible Role](https://img.shields.io/ansible/role/56377)](https://galaxy.ansible.com/skrepr/hostname)
-[![Ansible Role](https://img.shields.io/ansible/role/d/56377)](https://galaxy.ansible.com/skrepr/hostname)
-[![Ansible Quality Score](https://img.shields.io/ansible/quality/56377)](https://galaxy.ansible.com/skrepr/hostname)
+It works by taking your `{{ inventory_hostname }}` and using it for changing the hostname.
+
+[![Ansible Role](https://img.shields.io/ansible/role/56457)](https://galaxy.ansible.com/skrepr/hostname)
+[![Ansible Role](https://img.shields.io/ansible/role/d/56457)](https://galaxy.ansible.com/skrepr/hostname)
+[![Ansible Quality Score](https://img.shields.io/ansible/quality/56457)](https://galaxy.ansible.com/skrepr/hostname)
 
 ## Requirements
 
