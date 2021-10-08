@@ -1,0 +1,22 @@
+---
+dependencies: []
+
+galaxy_info:
+  role_name: hostname
+  author: skrepr
+  description: Change the hostname on your linux server
+  company: "Skrepr B.V."
+  license: "license (BSD, MIT)"
+  min_ansible_version: 2.11
+  platforms:
+    - name: Debian
+      versions:
+        - buster
+        - bullseye
+    - name: Ubuntu
+      versions:
+        - bionic
+        - focal
+  galaxy_tags:
+    - hostname
+    - linux

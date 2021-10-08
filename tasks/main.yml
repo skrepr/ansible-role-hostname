@@ -1,0 +1,12 @@
+---
+  - name: "Update Hostname"
+    hostname:
+      name: "{{ inventory_hostname }}"
+      use: systemd
+      
+  - name: 'Add hostname to /etc/hosts'
+    lineinfile:
+      path: /etc/hosts
+      regexp: '^127\.0\.0\.1[ \t]+localhost'
+      line: '127.0.0.1 localhost {{ inventory_hostname }}'
+      state: present
